@@ -37,7 +37,7 @@ export const CHARACTERS = [
     quote: '鉴宝易，鉴人难。',
     faction: '五脉',
     color: '#E53935',
-    image: '../images/xuyuan.jpg'
+    image: '/mystery-of-antiques/images/xuyuan.jpg'
   },
 
   // 药不然（yaoburan.jpg）
@@ -50,7 +50,7 @@ export const CHARACTERS = [
     quote: '真相往往藏在最显眼的地方。',
     faction: '五脉',
     color: '#1E88E5',
-    image: '../images/yaoburan.jpg'
+    image: '/mystery-of-antiques/images/yaoburan.jpg'
   },
 
   // 黄烟烟（huangyanyan.jpg）
@@ -63,7 +63,7 @@ export const CHARACTERS = [
     quote: '古董的事，要靠古董的规矩解决。',
     faction: '五脉',
     color: '#43A047',
-    image: '../images/huangyanyan.jpg'
+    image: '/mystery-of-antiques/images/huangyanyan.jpg'
   },
 
   // 木户加奈（muhujianai.jpg）
@@ -76,7 +76,7 @@ export const CHARACTERS = [
     quote: '爷爷的遗愿，就是让佛头回到它该去的地方。',
     faction: '其他',
     color: '#FB8C00',
-    image: '../images/muhujianai.jpg'
+    image: '/mystery-of-antiques/images/muhujianai.jpg'
   },
 
   // 老朝奉（laochaofeng.jpg）
@@ -89,7 +89,7 @@ export const CHARACTERS = [
     quote: '这世上的真假，我说了算。',
     faction: '老朝奉',
     color: '#212121',
-    image: '../images/laochaofeng.jpg'
+    image: '/mystery-of-antiques/images/laochaofeng.jpg'
   },
 
   // 许一城（xuyicheng.jpg）
@@ -102,7 +102,7 @@ export const CHARACTERS = [
     quote: '人可以死，东西不能丢。',
     faction: '五脉',
     color: '#E53935',
-    image: '../images/xuyicheng.jpg'
+    image: '/mystery-of-antiques/images/xuyicheng.jpg'
   },
 
   // 付贵（fugui.jpg）
@@ -115,7 +115,7 @@ export const CHARACTERS = [
     quote: '这琉璃厂的水，深着呢。',
     faction: '其他',
     color: '#795548',
-    image: '../images/fugui.jpg'
+    image: '/mystery-of-antiques/images/fugui.jpg'
   },
 
   // 罗局（luoju.jpg）
@@ -128,7 +128,7 @@ export const CHARACTERS = [
     quote: '文物归国，是国家的大事。',
     faction: '其他',
     color: '#607D8B',
-    image: '../images/luoju.jpg'
+    image: '/mystery-of-antiques/images/luoju.jpg'
   },
 
   // 木户有三（muhuyousan.jpg）
@@ -141,7 +141,7 @@ export const CHARACTERS = [
     quote: '艺术无国界，但真相有归处。',
     faction: '其他',
     color: '#FB8C00',
-    image: '../images/muhuyousan.jpg'
+    image: '/mystery-of-antiques/images/muhuyousan.jpg'
   },
 
   // 黄克武（huangkewu.jpg）
@@ -154,7 +154,7 @@ export const CHARACTERS = [
     quote: '黄家的东西，从来不讲价。',
     faction: '五脉',
     color: '#43A047',
-    image: '../images/huangkewu.jpg'
+    image: '/mystery-of-antiques/images/huangkewu.jpg'
   },
 
   // 药来（yaolai.jpg）
@@ -167,7 +167,7 @@ export const CHARACTERS = [
     quote: '任何时候，最需要当心地，是身边人。',
     faction: '五脉',
     color: '#1E88E5',
-    image: '../images/yaolai.jpg'
+    image: '/mystery-of-antiques/images/yaolai.jpg'
   },
 
   // 细川太郎（xichuantailang.jpg）
@@ -180,7 +180,7 @@ export const CHARACTERS = [
     quote: '我愿意为加奈小姐做任何事，除了这一件。',
     faction: '其他',
     color: '#9C27B0',
-    image: '../images/xichuantailang.jpg'
+    image: '/mystery-of-antiques/images/xichuantailang.jpg'
   }
 ];
 
@@ -192,7 +192,7 @@ export const ANTIQUES: Antique[] = [
     tag: '',
     description: '全剧之眼。这尊玉佛头的真假，牵动了跨越半个世纪的家族恩怨与国宝归还。1937年，许一城被指盗卖佛头给日本人木户有三，被定为汉奸枪决。六十年后，木户有三的孙女木户加奈秉承祖父遗愿，将佛头归还中国，却指定要许家后人参与交接仪式。\n许愿在鉴定时发现佛头为赝品，从而展开了一场追寻真相的冒险，在追寻真相的过程中逐渐揭开了爷爷许一城的冤屈，也揭露了老朝奉的阴谋。',
     story: '整个故事的核心，牵扯出许家三代的荣辱兴衰。',
-    image: '../images/buddha-head.jpg',
+    image: '/mystery-of-antiques/images/buddha-head.jpg',
     metadata: { label: 'DYNASTY', value: 'TANG' }
   },
   {
@@ -202,7 +202,7 @@ export const ANTIQUES: Antique[] = [
     tag: '',
     description: '木户有三留下的笔记，不仅记录了佛头案的疑点，更包含了一段深藏已久的真相。',
     story: '许愿通过笔记中的线索，逐步还原了当年佛头案的真实经过。',
-    image: '../images/kido-notebook.jpg',
+    image: '/mystery-of-antiques/images/kido-notebook.jpg',
     metadata: { label: 'ORIGIN', value: 'JAPAN' }
   },
   {
@@ -212,7 +212,7 @@ export const ANTIQUES: Antique[] = [
     tag: '',
     description: '世间仅存三件的宝贝，其中一件被黄家收藏，但多年前遗失了。',
     story: '许愿一行在安阳斗口时靠着黄烟烟拿出的父辛爵棋胜一招。许愿惊讶于这件东西的仿制技术，但黄烟烟却说这是真品。是真是假，背后藏着不为人知的隐秘。',
-    image: '../images/bronze-ware.jpg',
+    image: '/mystery-of-antiques/images/bronze-ware.jpg',
     metadata: { label: 'FAMILY', value: 'HUANG' }
   },
   {
@@ -222,7 +222,7 @@ export const ANTIQUES: Antique[] = [
     tag: '',
     description: '纹饰繁复，工艺考究，是唐代铜镜的巅峰之作。刻有“宝志”二字。',
     story: '许愿在调查过程中发现的关键线索之一。',
-    image: '../images/bronze-mirror.jpg',
+    image: '/mystery-of-antiques/images/bronze-mirror.jpg',
     metadata: { label: 'DYNASTY', value: 'TANG' }
   }
 ];
