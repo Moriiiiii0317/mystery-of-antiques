@@ -14,24 +14,24 @@ export const Characters: React.FC = () => {
       <nav className="flex items-center gap-4 font-bold text-sm">
         <Link to="/" className="hover:bg-[#E53935] hover:text-white px-2 transition-colors">首页</Link>
         <span className="opacity-30">/</span>
-        <span className="text-gray-500 uppercase tracking-widest">Character Archive</span>
+        <span className="text-gray-400 uppercase tracking-widest">Character Archive</span>
       </nav>
 
       <header className="mb-12">
-        <h1 className="text-5xl md:text-6xl font-black uppercase tracking-tighter">人物资料</h1>
+        <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tighter">人物资料</h1>
         <p className="mt-4 border-l-4 border-[#E53935] pl-4 text-lg font-medium max-w-2xl text-gray-700 italic">
           鉴宝易，鉴人难。这里收录了“佛头案”迷局中的核心玩家。
         </p>
       </header>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
         {CHARACTERS.map((char) => (
           <Link 
             key={char.id}
             to={`/characters/${char.id}`}
             className="neo-card group flex flex-col"
           >
-            <div className="h-64 bg-gray-200 relative overflow-hidden">
+            <div className="h-80 sm:h-64 bg-gray-200 relative overflow-hidden">
               <img 
                 src={char.image} 
                 alt={char.name}
@@ -40,13 +40,13 @@ export const Characters: React.FC = () => {
               />
             </div>
             <div className="p-4 border-t border-black bg-white flex-1">
-              <div className="flex justify-between items-start mb-2">
+              <div className="flex justify-between items-center mb-2">
                 <h3 className="text-2xl font-black">{char.name}</h3>
-                <span className="text-[10px] bg-black text-white px-2 py-0.5 font-bold uppercase tracking-tighter" style={{ backgroundColor: char.color }}>
+                <span className="text-xs text-white px-2 py-0.5 font-bold" style={{ backgroundColor: char.color }}>
                   {char.tag}
                 </span>
               </div>
-              <p className="text-sm text-gray-600 font-bold leading-tight line-clamp-2">
+              <p className="text-sm text-gray-500 font-medium leading-tight line-clamp-2">
                 {char.description}
               </p>
             </div>
@@ -82,7 +82,7 @@ export const CharacterDetail: React.FC<{ id?: string }> = ({ id }) => {
       
       <div className="lg:col-span-8 space-y-8">
         <header>
-          <div className="inline-block px-4 py-1 bg-black text-white font-bold mb-4 border border-black" style={{ backgroundColor: char.color }}>
+          <div className="inline-block px-4 py-1 bg-black text-white font-bold mb-4" style={{ backgroundColor: char.color }}>
             {char.faction} · {char.tag}
           </div>
           <h1 className="text-6xl font-black uppercase">{char.name}</h1>
@@ -94,7 +94,7 @@ export const CharacterDetail: React.FC<{ id?: string }> = ({ id }) => {
             <span className="w-2 h-6 bg-[#E53935]"></span>
             人物生平
           </h3>
-          <p className="text-lg leading-relaxed font-medium text-gray-700">
+          <p className="text-lg leading-relaxed font-medium text-gray-500">
             {char.description}
           </p>
         </div>

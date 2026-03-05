@@ -148,12 +148,12 @@ export const TrajectoryMap: React.FC = () => {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="flex flex-col h-[calc(100vh-200px)] min-h-[600px] space-y-8"
+      className="flex flex-col md:h-[calc(100vh-200px)] md:min-h-[600px] space-y-8"
     >
       <nav className="flex items-center gap-4 font-bold text-sm shrink-0">
         <Link to="/" className="hover:bg-[#E53935] hover:text-white px-2 transition-colors">首页</Link>
         <span className="opacity-30">/</span>
-        <span className="text-gray-500 uppercase tracking-widest">Trajectory Map</span>
+        <span className="text-gray-400 uppercase tracking-widest">Trajectory Map</span>
       </nav>
 
       <header className="shrink-0">
@@ -186,17 +186,17 @@ export const TrajectoryMap: React.FC = () => {
             </div>
 
             <div className="mt-auto pt-4 border-t border-black border-dashed">
-              <p className="text-xs font-bold text-gray-600">
+              <p className="text-xs font-bold text-gray-500">
                 点击节点，查看发生在该地的核心剧情。
               </p>
             </div>
           </div>
         </aside>
 
-        <div className="neo-card-static flex-1 relative bg-white bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PHBhdGggZD0iTTAgMGg0MHY0MEgweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0wIDM5LjVoNDBNMzkuNSAwdi00MEgzOS41eiIgc3Ryb2tlPSIjZTVlNWU1IiBzdHJva2Utd2lkdGg9IjEiLz48L3N2Zz4=')]">
+        <div className="neo-card-static flex-1 relative min-h-[400px] md:min-h-0 bg-white bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PHBhdGggZD0iTTAgMGg0MHY0MEgweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0wIDM5LjVoNDBNMzkuNSAwdi00MEgzOS41eiIgc3Ryb2tlPSIjZTVlNWU1IiBzdHJva2Utd2lkdGg9IjEiLz48L3N2Zz4=')]">
           <ReactECharts
             option={option}
-            style={{ height: '100%', width: '100%' }}
+            style={{ height: '100%', minHeight: '400px', width: '100%' }}
             onEvents={{
               'click': onChartClick
             }}
@@ -213,7 +213,7 @@ export const TrajectoryMap: React.FC = () => {
                   ×
                 </button>
               </div>
-              <p className="text-xs font-bold text-gray-700 leading-snug italic">
+              <p className="text-xs font-medium text-gray-500 leading-snug italic">
                 {popupInfo.desc}
               </p>
               <div className="mt-3 pt-2 border-t border-dashed border-gray-400 flex gap-2 flex-wrap">

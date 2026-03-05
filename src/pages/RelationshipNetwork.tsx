@@ -172,12 +172,12 @@ export const RelationshipNetwork: React.FC = () => {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="flex flex-col h-[calc(100vh-200px)] min-h-[600px] space-y-8"
+      className="flex flex-col md:h-[calc(100vh-200px)] md:min-h-[600px] space-y-8"
     >
       <nav className="flex items-center gap-4 font-bold text-sm shrink-0">
         <Link to="/" className="hover:bg-[#E53935] hover:text-white px-2 transition-colors">首页</Link>
         <span className="opacity-30">/</span>
-        <span className="text-gray-500 uppercase tracking-widest">Character Network</span>
+        <span className="text-gray-400 uppercase tracking-widest">Character Network</span>
       </nav>
 
       <header className="shrink-0 flex justify-between items-end">
@@ -190,10 +190,10 @@ export const RelationshipNetwork: React.FC = () => {
       </header>
 
       <main className="flex-1 flex gap-8 min-h-0 relative overflow-hidden">
-        <div className="neo-card-static flex-1 h-full relative overflow-hidden bg-white">
+        <div className="neo-card-static flex-1 min-h-[500px] md:min-h-0 h-full relative overflow-hidden bg-white">
           <ReactECharts
             option={option}
-            style={{ height: '100%', width: '100%' }}
+            style={{ height: '100%', minHeight: '500px', width: '100%' }}
             onEvents={{
               'click': onChartClick,
               'dblclick': onChartDblClick
@@ -203,11 +203,11 @@ export const RelationshipNetwork: React.FC = () => {
 
         {/* Side Panel */}
         <div className={`neo-card-static w-80 h-full p-6 flex flex-col bg-[#fffbeb] shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-all duration-500 absolute right-3 top-0 z-50 md:relative md:right-0 md:-ml-3 ${selectedNode ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0 md:translate-x-0 md:opacity-100'}`}>
-          <div className="border-b border-black pb-4 mb-4 flex justify-between items-start">
+          <div className="border-b border-black pb-4 mb-4 flex justify-between items-center">
             <h2 className="text-3xl font-black">{selectedNode?.name || '人物信息'}</h2>
             <div className="flex gap-2">
               {selectedNode && (
-                <span className={`px-2 py-0.5 font-black text-[10px] uppercase border border-black ${selectedNode.category === 2 ? 'bg-[#E53935] text-white' : 'bg-black text-white'}`}>
+                <span className={`px-2 py-0.5 font-black text-xs uppercase ${selectedNode.category === 2 ? 'bg-[#E53935] text-white' : 'bg-black text-white'}`}>
                   {selectedNode.faction}
                 </span>
               )}
@@ -220,7 +220,7 @@ export const RelationshipNetwork: React.FC = () => {
             </div>
           </div>
           
-          <p className="text-gray-700 font-bold leading-snug mb-6 flex-1 italic">
+          <p className="text-gray-500 font-bold leading-snug mb-6 flex-1 italic">
             {selectedNode?.desc || '点击左侧关系图中的气泡，查看该人物的详细网络关系。双击气泡可跳转至人物详情页。'}
           </p>
 
@@ -230,7 +230,7 @@ export const RelationshipNetwork: React.FC = () => {
                 <span className="w-2 h-4 bg-black"></span>
                 关联线索
               </h3>
-              <ul className="space-y-3 text-xs font-bold text-gray-600">
+              <ul className="space-y-3 text-xs font-bold text-gray-500">
                 {getRelatedRelations().map((rel, idx) => (
                   <li key={idx} className="flex justify-between items-center border-b border-dashed border-gray-300 pb-2">
                     <span>与 <span className="text-black font-black">{rel.name}</span></span>

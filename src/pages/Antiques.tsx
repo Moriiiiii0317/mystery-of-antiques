@@ -15,13 +15,13 @@ export const Antiques: React.FC = () => {
       <nav className="flex items-center gap-4 font-bold text-sm">
         <Link to="/" className="hover:bg-[#E53935] hover:text-white px-2 transition-colors">首页</Link>
         <span className="opacity-30">/</span>
-        <span className="text-gray-500 uppercase tracking-widest">Antique Collection</span>
+        <span className="text-gray-400 uppercase tracking-widest">Antique Collection</span>
       </nav>
 
       <header className="mb-12">
         <h1 className="text-5xl md:text-6xl font-black uppercase tracking-tighter">古董图鉴</h1>
         <p className="mt-4 border-l-4 border-[#E53935] pl-4 text-lg font-medium max-w-2xl text-gray-700 italic">
-          “真赝之间，乾坤尽藏”
+          “人压物，压不住；物压人，压断魂。”
         </p>
       </header>
 
@@ -53,7 +53,7 @@ export const Antiques: React.FC = () => {
                   <span className="text-xs font-bold border border-black px-2 py-0.5">{item.era}</span>
                 </div>
               </div>
-              <p className="text-sm text-gray-700 font-bold leading-snug flex-1 line-clamp-2">
+              <p className="text-sm text-gray-500 font-medium leading-snug flex-1 line-clamp-2">
                 {item.description}
               </p>
             </div>
@@ -98,7 +98,7 @@ export const AntiqueDetail: React.FC<{ id?: string }> = ({ id }) => {
             <span className="w-2 h-6 bg-[#E53935]"></span>
             基本信息
           </h3>
-          <p className="text-lg leading-relaxed font-medium text-gray-700 whitespace-pre-wrap">
+          <p className="text-lg leading-relaxed font-medium text-gray-500 whitespace-pre-wrap">
             {item.description}
           </p>
         </div>

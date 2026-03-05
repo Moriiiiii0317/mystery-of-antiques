@@ -9,13 +9,13 @@ export const Header: React.FC = () => (
           Mystery of Antiques
         </h1>
       </Link>
-      <p className="text-lg mt-2 font-bold text-gray-500">古董局中局 · 互动画廊</p>
+      <p className="text-lg mt-2 font-bold text-gray-700">古董局中局 · 互动画廊</p>
     </div>
   </header>
 );
 
 export const Footer: React.FC = () => (
   <footer className="mt-20 border-t border-black pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
-    <p className="font-bold text-sm">基于 2018 同名电视剧集制作. 本站仅供学习交流使用</p>
+    <p className="font-bold text-sm text-gray-700">基于 2018 同名电视剧集制作. 本站仅供学习交流使用</p>
   </footer>
 );
