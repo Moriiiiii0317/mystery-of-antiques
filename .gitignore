@@ -1,0 +1,19 @@
+# --- 🔴 绝对不能上传的“红灯区”文件 ---
+
+# Python 拦截名单
+backend/.venv/
+backend/__pycache__/
+backend/database.db
+
+# 前端拦截名单
+node_modules/
+dist/
+
+# 环境变量拦截名单
+.env
+.DS_Store
+
+build/
+coverage/
+*.log
+!.env.example

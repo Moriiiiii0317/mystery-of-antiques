@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Noto Sans SC", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-[#f4f1ea] text-black selection:bg-[#E53935] selection:text-white;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.15'/%3E%3C/svg%3E");
+    background-attachment: fixed;
+  }
+  
+  /* 增加这个媒体查询：只在屏幕宽度大于 768px (平板和电脑) 时才缩小 90% */
+  @media (min-width: 768px) {
+    body {
+      zoom: 90%;
+    } 
+  }
+}
+
+@layer components {
+  .neo-card {
+    @apply bg-white border border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all duration-200;
+  }
+
+  .neo-card-static {
+    @apply bg-white border border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)];
+  }
+
+  .neo-card:hover {
+    @apply -translate-x-1 -translate-y-1 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] bg-[#fffbeb];
+  }
+
+  .neo-card:active {
+    @apply translate-x-0.5 translate-y-0.5 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)];
+  }
+
+  .neo-btn {
+    @apply border border-black px-4 py-1 font-bold hover:bg-black hover:text-white transition-colors shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] active:shadow-none active:translate-x-0.5 active:translate-y-0.5;
+  }
+
+  .neo-btn-red {
+    @apply bg-[#E53935] text-white border border-black px-6 py-2 font-bold hover:bg-black transition-colors shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:shadow-none active:translate-x-1 active:translate-y-1;
+  }
+
+  .neo-btn-gray {
+    @apply bg-[#e5e5e5] text-black border border-black px-6 py-2 font-bold hover:bg-black hover:text-white transition-colors shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:shadow-none active:translate-x-1 active:translate-y-1;
+  }
+}
