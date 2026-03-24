@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 // 【修复 1】引入 useParams 获取动态路由 ID
 import { Link, useParams } from 'react-router-dom';
@@ -94,6 +95,15 @@ export const Characters: React.FC = () => {
     );
   }
 
+=======
+// src/pages/Characters.tsx 完整代码
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion'; // 修复：motion 应该从 framer-motion 导入（你之前写错了）
+import { CHARACTERS } from '../data';
+
+export const Characters: React.FC = () => {
+>>>>>>> aff91c23d1b064124edd80425f560395edccc498
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -109,13 +119,21 @@ export const Characters: React.FC = () => {
       <header className="mb-12">
         <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tighter">人物资料</h1>
         <p className="mt-4 border-l-4 border-[#E53935] pl-4 text-lg font-medium max-w-2xl text-gray-700 italic">
+<<<<<<< HEAD
           鉴宝易，鉴人难。这里收录了”佛头案”迷局中的核心玩家。
+=======
+          鉴宝易，鉴人难。这里收录了“佛头案”迷局中的核心玩家。
+>>>>>>> aff91c23d1b064124edd80425f560395edccc498
         </p>
       </header>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+<<<<<<< HEAD
         {/* 【修复 4】使用安全的 charArray 进行映射 */}
         {charArray.map((char) => (
+=======
+        {CHARACTERS.map((char) => (
+>>>>>>> aff91c23d1b064124edd80425f560395edccc498
           <Link 
             key={char.id}
             to={`/characters/${char.id}`}
@@ -123,8 +141,12 @@ export const Characters: React.FC = () => {
           >
             <div className="h-80 sm:h-64 bg-gray-200 relative overflow-hidden">
               <img 
+<<<<<<< HEAD
                 // 【修复 5】清洗列表页的图片路径
                 src={char.image?.replace(/^\.\.\//, '/')} 
+=======
+                src={char.image} 
+>>>>>>> aff91c23d1b064124edd80425f560395edccc498
                 alt={char.name}
                 className="w-full h-full object-cover grayscale-0 group-hover:grayscale-0 transition-all duration-500 group-hover:scale-110"
                 referrerPolicy="no-referrer"
@@ -144,10 +166,16 @@ export const Characters: React.FC = () => {
           </Link>
         ))}
       </div>
+<<<<<<< HEAD
+=======
+
+      {/* Removed footer status bar */}
+>>>>>>> aff91c23d1b064124edd80425f560395edccc498
     </motion.div>
   );
 };
 
+<<<<<<< HEAD
 export const CharacterDetail: React.FC<{ id?: string }> = ({ id: propId }) => {
   // 【修复 6】获取并合并路由中的 ID
   const { id: paramId } = useParams();
@@ -169,6 +197,11 @@ export const CharacterDetail: React.FC<{ id?: string }> = ({ id: propId }) => {
 
   // 【修复 10】清洗详情页图片路径
   const safeImagePath = char.image?.replace(/^\.\.\//, '/');
+=======
+export const CharacterDetail: React.FC<{ id?: string }> = ({ id }) => {
+  const char = CHARACTERS.find(c => c.id === id);
+  if (!char) return <div>Character not found</div>;
+>>>>>>> aff91c23d1b064124edd80425f560395edccc498
 
   return (
     <motion.div
@@ -179,7 +212,11 @@ export const CharacterDetail: React.FC<{ id?: string }> = ({ id: propId }) => {
       <div className="lg:col-span-4">
         <div className="neo-card-static overflow-hidden">
           <img 
+<<<<<<< HEAD
             src={safeImagePath} // 使用安全路径
+=======
+            src={char.image} 
+>>>>>>> aff91c23d1b064124edd80425f560395edccc498
             alt={char.name}
             className="w-full aspect-[3/4] object-cover grayscale-0"
             referrerPolicy="no-referrer"

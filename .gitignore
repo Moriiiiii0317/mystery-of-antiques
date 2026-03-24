@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # --- 🔴 绝对不能上传的“红灯区”文件 ---
 
 # Python 拦截名单
@@ -16,4 +17,13 @@ dist/
 build/
 coverage/
 *.log
+=======
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+.env*
+>>>>>>> aff91c23d1b064124edd80425f560395edccc498
 !.env.example

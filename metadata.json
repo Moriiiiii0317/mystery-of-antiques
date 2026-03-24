@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "characters": [
     {
       "id": "xu-yuan",
@@ -188,3 +189,9 @@
     }
   ]
 }
+=======
+  "name": "古董局中局百科",
+  "description": "沉浸式《古董局中局》互动信息聚合站，采用 Neo-brutalism 设计风格。",
+  "requestFramePermissions": []
+}
+>>>>>>> aff91c23d1b064124edd80425f560395edccc498

@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 // 【修复】增加了 useParams 用于获取网址中的 ID
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { motion } from 'motion/react';
@@ -96,6 +97,14 @@ export const Antiques: React.FC = () => {
       </motion.div>
     );
   }
+=======
+import { Link, useNavigate } from 'react-router-dom';
+import { motion } from 'motion/react';
+import { ANTIQUES } from '../data';
+
+export const Antiques: React.FC = () => {
+  const navigate = useNavigate();
+>>>>>>> aff91c23d1b064124edd80425f560395edccc498
 
   return (
     <motion.div
@@ -112,22 +121,37 @@ export const Antiques: React.FC = () => {
       <header className="mb-12">
         <h1 className="text-5xl md:text-6xl font-black uppercase tracking-tighter">古董图鉴</h1>
         <p className="mt-4 border-l-4 border-[#E53935] pl-4 text-lg font-medium max-w-2xl text-gray-700 italic">
+<<<<<<< HEAD
           "人压物，压不住；物压人，压断魂。"
+=======
+          “人压物，压不住；物压人，压断魂。”
+>>>>>>> aff91c23d1b064124edd80425f560395edccc498
         </p>
       </header>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+<<<<<<< HEAD
         {/* 【修复 3】使用安全提取出的 antiquesArray 进行循环 */}
         {antiquesArray.map((item) => (
           <div
             key={item.id}
+=======
+        {ANTIQUES.map((item, index) => (
+          <div 
+            key={item.id} 
+>>>>>>> aff91c23d1b064124edd80425f560395edccc498
             className="neo-card flex flex-col group cursor-pointer"
             onClick={() => navigate(`/antiques/${item.id}`)}
           >
             <div className="h-80 bg-zinc-200 border-b border-black flex items-center justify-center relative overflow-hidden">
+<<<<<<< HEAD
               <img
                 // 【修复 4】确保列表页的图片路径也被清洗，防止裂图
                 src={item.image?.replace(/^\.\.\//, '/')}
+=======
+              <img 
+                src={item.image} 
+>>>>>>> aff91c23d1b064124edd80425f560395edccc498
                 alt={item.name}
                 className="absolute inset-0 w-full h-full object-cover grayscale-0 group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
                 referrerPolicy="no-referrer"
@@ -157,6 +181,7 @@ export const Antiques: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export const AntiqueDetail: React.FC<{ id?: string }> = ({ id: propId }) => {
   // 【修复 5】从网址参数中抓取 ID
   const { id: paramId } = useParams();
@@ -177,6 +202,11 @@ export const AntiqueDetail: React.FC<{ id?: string }> = ({ id: propId }) => {
 
   // 【修复 8】清洗图片路径
   const safeImagePath = antique.image?.replace(/^\.\.\//, '/');
+=======
+export const AntiqueDetail: React.FC<{ id?: string }> = ({ id }) => {
+  const item = ANTIQUES.find(a => a.id === id);
+  if (!item) return <div>Antique not found</div>;
+>>>>>>> aff91c23d1b064124edd80425f560395edccc498
 
   return (
     <motion.div
@@ -186,14 +216,21 @@ export const AntiqueDetail: React.FC<{ id?: string }> = ({ id: propId }) => {
     >
       <div className="lg:col-span-5">
         <div className="neo-card-static overflow-hidden">
+<<<<<<< HEAD
           <img
             src={safeImagePath}
             alt={antique.name}
+=======
+          <img 
+            src={item.image} 
+            alt={item.name}
+>>>>>>> aff91c23d1b064124edd80425f560395edccc498
             className="w-full aspect-square object-cover grayscale-0"
             referrerPolicy="no-referrer"
           />
         </div>
       </div>
+<<<<<<< HEAD
 
       <div className="lg:col-span-7 space-y-8">
         <header>
@@ -201,6 +238,15 @@ export const AntiqueDetail: React.FC<{ id?: string }> = ({ id: propId }) => {
             {antique.era}
           </div>
           <h1 className="text-6xl font-black uppercase tracking-tighter">{antique.name}</h1>
+=======
+      
+      <div className="lg:col-span-7 space-y-8">
+        <header>
+          <div className="inline-block px-4 py-1 bg-[#E53935] text-white font-bold mb-4 border border-black">
+            {item.era}{item.tag ? ` · ${item.tag}` : ''}
+          </div>
+          <h1 className="text-6xl font-black uppercase tracking-tighter">{item.name}</h1>
+>>>>>>> aff91c23d1b064124edd80425f560395edccc498
         </header>
 
         <div className="neo-card-static p-8 bg-[#fffbeb] flex-1">
@@ -209,6 +255,7 @@ export const AntiqueDetail: React.FC<{ id?: string }> = ({ id: propId }) => {
             基本信息
           </h3>
           <p className="text-lg leading-relaxed font-medium text-gray-500 whitespace-pre-wrap">
+<<<<<<< HEAD
             {antique.description}
           </p>
           
@@ -223,6 +270,10 @@ export const AntiqueDetail: React.FC<{ id?: string }> = ({ id: propId }) => {
                 </p>
              </>
           )}
+=======
+            {item.description}
+          </p>
+>>>>>>> aff91c23d1b064124edd80425f560395edccc498
         </div>
 
         <div className="flex gap-4">
@@ -231,4 +282,8 @@ export const AntiqueDetail: React.FC<{ id?: string }> = ({ id: propId }) => {
       </div>
     </motion.div>
   );
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> aff91c23d1b064124edd80425f560395edccc498
