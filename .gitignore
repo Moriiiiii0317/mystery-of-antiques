@@ -1,3 +1,4 @@
+
 # --- 🔴 绝对不能上传的“红灯区”文件 ---
 
 # Python 拦截名单
@@ -17,3 +18,7 @@ build/
 coverage/
 *.log
 !.env.example
+# 绝对禁止 Git 追踪 SSL 证书文件
+ssl/
+*.key
+*.crt
